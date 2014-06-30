@@ -1,4 +1,14 @@
 <h1>Register A New Account</h1>
+<% if @user.errors.present? %>
+  <div class="errors">
+    <ul class="error-list">
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_for @user, url: "/users" do |f| %>
 
   <p>
@@ -29,5 +39,5 @@
 <p>
   <%= f.submit "Create Account", class: "submit-button" %>
 </p>
-
 <% end %>
+

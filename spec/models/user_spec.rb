@@ -20,6 +20,12 @@ describe User do
 
         expect(user.valid?).to eq false
       end
+
+      it 'email must be valid' do
+        user = User.new(email: 'joe', password: 'password', password_confirmation: 'password')
+
+        expect(user.valid?).to eq false
+      end
     end
   end
 end

@@ -6,7 +6,6 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to user_path(@user)
     else
-      flash.now[:notice] = "There was an error"
       render 'registrations/new'
     end
   end
