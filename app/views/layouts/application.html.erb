@@ -8,6 +8,14 @@
 </head>
 <body>
 
+<div class="notice">
+<%= flash[:notice] %>
+</div>
+
+<% if logged_in? %>
+<%= link_to "Logout", logout_path, method: :delete %>
+  <% end %>
+
 <%= yield %>
 
 </body>
