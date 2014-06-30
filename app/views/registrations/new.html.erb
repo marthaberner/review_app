@@ -1,12 +1,13 @@
+<h1>Register A New Account</h1>
 <%= form_for @user, url: "/users" do |f| %>
 
   <p>
-    <%= f.label :first_name, class: "form-label" %>
+    <%= f.label :first_name, "First Name", class: "form-label" %>
     <%= f.text_field :first_name %>
   </p>
 
 <p>
-  <%= f.label :last_name, class: "form-label" %>
+  <%= f.label :last_name, "Last Name", class: "form-label" %>
   <%= f.text_field :last_name %>
 </p>
 
@@ -21,7 +22,7 @@
 </p>
 
 <p>
-  <%= f.label :password_confirmation, class: "form-label" %>
+  <%= f.label :password_confirmation, "Password Confirmation", class: "form-label" %>
   <%= f.password_field :password_confirmation %>
 </p>
 
