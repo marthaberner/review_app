@@ -15,7 +15,7 @@ feature 'User Accounts' do
 
     expect(page).to have_content 'Welcome, Joe!'
 
-    #User can logut and login
+    #User can logout and login
     click_link 'Logout'
 
     expect(page).to have_content 'You are logged out'
