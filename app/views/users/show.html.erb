@@ -1,1 +1,15 @@
+<div class="greeting">
 <h1>Welcome, <%= @user.first_name %>!</h1>
+</div>
+
+<div class="posts">
+  <h2>My Posts</h2>
+  <% @posts.each do |post| %>
+    <ul class="user-posts">
+      <li>Subject: <%= post.subject %></li>
+      <li>Message: <%= post.body %></li>
+      <li>&nbsp;</li>
+      <li><%= link_to "Delete Post", post_path(post), method: :delete, class: "delete" %></li>
+    </ul>
+  <% end %>
+</div>
