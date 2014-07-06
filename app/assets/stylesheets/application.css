@@ -62,7 +62,7 @@ header h1 {
 }
 
 .submit-post {
-    margin-left: 247px;
+    margin-left: 145px;
 }
 
 .submit-button {
@@ -97,5 +97,7 @@ header h1 {
 
 .user-posts ul, li {
     color: black;
+    display: inline;
+    padding-right: 100px;
 
 }
