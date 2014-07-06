@@ -6,9 +6,7 @@
   <h2>My Posts</h2>
   <% @posts.each do |post| %>
     <ul class="user-posts">
-      <li>Subject: <%= post.subject %></li>
-      <li>Message: <%= post.body %></li>
-      <li>&nbsp;</li>
+      <li><%= post.body %></li>
       <li><%= link_to "Delete Post", post_path(post), method: :delete, class: "delete" %></li>
     </ul>
   <% end %>

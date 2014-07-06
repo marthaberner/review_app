@@ -1,4 +1,5 @@
 <div class="form">
+  <h3>Post Message</h3>
   <%= form_for @post do |f| %>
 
     <% if @post.errors.present? %>
@@ -11,11 +12,6 @@
         </ul>
       </div>
     <% end %>
-
-    <p>
-      <%= f.label :subject, class: "form-label" %>
-      <%= f.text_field :subject %>
-    </p>
 
     <p>
       <%= f.label :body, class: "form-label" %>
