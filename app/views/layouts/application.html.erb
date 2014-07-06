@@ -19,11 +19,13 @@
 <div class="links">
   <% if logged_in? %>
     <li><%= link_to "Logout", logout_path, method: :delete %></li>
-    <li><%= link_to "Write A Post", new_post_path %></li>
+    <% if params[:action] != "new" %>
+      <li><%= link_to "Write A Post", new_post_path %></li>
+    <% end %>
   <% end %>
 </div>
 
-  <%= yield %>
+<%= yield %>
 
 </body>
 </html>

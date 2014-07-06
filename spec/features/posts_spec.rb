@@ -15,6 +15,7 @@ feature 'Posts' do
     expect(page).to have_content 'Welcome, Joe!'
 
     click_link 'Write A Post'
+    expect(page).to have_no_link 'Write A Post'
 
     fill_in 'post[body]', with: 'Loving my new bike!'
     click_on 'Submit Post'
