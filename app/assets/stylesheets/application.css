@@ -69,6 +69,11 @@ header h1 {
     margin-left: 262px;
 }
 
+.post-delete {
+    float: right;
+    padding-right: 300px;
+}
+
 .links li {
     padding-top: 50px;
     display: inline;

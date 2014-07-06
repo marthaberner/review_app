@@ -7,7 +7,7 @@
   <% @posts.each do |post| %>
     <ul class="user-posts">
       <li><%= post.body %></li>
-      <li><%= link_to "Delete Post", post_path(post), method: :delete, class: "delete" %></li>
+      <li class="post-delete"><%= link_to "Delete Post", post_path(post), method: :delete, class: "delete" %></li>
     </ul>
   <% end %>
 </div>
