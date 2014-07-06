@@ -28,6 +28,8 @@ class PostsController < ApplicationController
     redirect_to user_path(user)
   end
 
+  private
+
   def post_params
     params.require(:post).permit(:body)
   end
