@@ -14,20 +14,71 @@
  *= require_self
  */
 
+body {
+    margin: 0px;
+}
+
+header {
+    background-color: lightgray;
+    height: 10em;
+    width: 100%;
+}
+
+header h1 {
+    padding-left: .5em;
+    padding-top: 40px;
+    color: darkgreen;
+    font-size: 60px;
+}
+
+.main {
+    padding-left: 50px;
+}
+
+.greeting {
+    margin: 0px;
+    padding-left: 80px;
+    padding-top: 15px;
+    background-color: lightblue;
+    height: 5em;
+}
+
+.greeting h1 {
+    color: darkblue;
+}
+
+.home {
+    padding-left: 80px;
+}
 
 .form-label {
     display: inline-block;
     width: 100px;
+    font-weight: bold;
+}
+
+.form {
+    padding-left: 80px;
+}
+
+.submit-post {
+    margin-left: 247px;
 }
 
 .submit-button {
-    margin-left: 130px;
+    margin-left: 262px;
 }
 
-.show-logout {
+.links li {
+    padding-top: 50px;
+    display: inline;
     float: right;
     color: blue;
     margin-right: 30px;
+}
+
+.posts {
+    padding-left: 80px;
 }
 
 .notice {
@@ -42,4 +93,9 @@
 .field_with_errors ul, li {
     color: red;
     list-style-type: none;
+}
+
+.user-posts ul, li {
+    color: black;
+
 }

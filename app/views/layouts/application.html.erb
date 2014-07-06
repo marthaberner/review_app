@@ -2,23 +2,29 @@
 <html>
 <head>
   <title>ReviewApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<header>
+  <div class="wrapper">
+    <h1>My Practive / Review App</h1>
+  </div>
+</header>
 <div class="notice">
-<%= flash[:notice] %>
+  <%= flash[:notice] %>
 </div>
 
-<div class="show-logout">
-<% if logged_in? %>
-<%= link_to "Logout", logout_path, method: :delete %>
+<div class="links">
+  <% if logged_in? %>
+    <li><%= link_to "Logout", logout_path, method: :delete %></li>
+    <li><%= link_to "Write A Post", new_post_path %></li>
   <% end %>
 </div>
 
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>
+

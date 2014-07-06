@@ -1,17 +1,19 @@
-<%= form_for :session, url: sessions_path do |f| %>
+<div class="home">
+  <%= form_for :session, url: sessions_path do |f| %>
 
-  <p>
-    <%= f.label :email, class: "form-label" %>
-    <%= f.text_field :email%>
-  </p>
+    <p>
+      <%= f.label :email, class: "form-label" %>
+      <%= f.text_field :email %>
+    </p>
 
-<p>
-  <%= f.label :password, class: "form-label" %>
-  <%= f.password_field :password %>
-</p>
+    <p>
+      <%= f.label :password, class: "form-label" %>
+      <%= f.password_field :password %>
+    </p>
 
-<p>
-  <%= f.submit "Login", class: "submit-button" %>
-</p>
+    <p>
+      <%= f.submit "Login", class: "submit-button" %>
+    </p>
 
-<% end %>
+  <% end %>
+</div>
