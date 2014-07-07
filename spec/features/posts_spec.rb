@@ -22,9 +22,23 @@ feature 'Posts' do
 
     expect(page).to have_content 'Loving my new bike!'
 
-    #User can delete a post
-    click_link 'Delete Post'
+    #User can only see their own posts
 
+    click_link 'Logout'
+    create_user
+
+    click_link 'Login'
+    fill_in 'session[email]', with: 'sue@sue.com'
+    fill_in 'session[password]', with: 'password'
+    click_on 'Login'
+
+    expect(page).to have_content 'Welcome, Sue!'
+
+    click_link 'Write A Post'
+    fill_in 'post[body]', with: 'Sue Post'
+    click_on 'Submit Post'
+
+    expect(page).to have_content 'Sue Post'
     expect(page).to have_no_content 'Loving my new bike!'
   end
 end

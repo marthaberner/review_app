@@ -2,7 +2,8 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    user = User.find_by(params[:id])
+    user = User.find(session[:id])
+    @post.user_id = user.id
 
     if @post.save
       redirect_to user_path(user)

@@ -7,5 +7,10 @@ class ApplicationController < ActionController::Base
     session[:id].present? && User.find(session[:id])
   end
 
-  helper_method :logged_in?
+  def post_belongs_to_user?(post)
+    user = User.find(session[:id])
+    post.user_id == user.id
+  end
+
+  helper_method :logged_in?, :post_belongs_to_user?
 end
