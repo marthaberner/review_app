@@ -5,11 +5,11 @@
 <div class="posts">
   <h2>My Posts</h2>
   <% @posts.each do |post| %>
-    <ul class="user-posts">
-      <% if post_belongs_to_user?(post) %>
-        <li><%= post.body %></li>
-        <li class="post-delete"><%= link_to "Delete Post", post_path(post), method: :delete, class: "delete" %></li>
-        </ul>
-      <% end %>
+    <% if post_belongs_to_user?(post) %>
+      <p>
+        <%= post.body %>
+      <%= link_to "Delete Post", post_path(post), method: :delete, class: "delete" %>
+      </p>
+    <% end %>
   <% end %>
 </div>
